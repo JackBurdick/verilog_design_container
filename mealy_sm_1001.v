@@ -9,6 +9,7 @@ parameter	S0 = 2'b00,
         	S2 = 2'b10,
         	S3 = 2'b11;
 
+// advance and reset logic
 always @(posedge clock or reset)
 	begin
 		if (reset == 1'b1)
@@ -17,6 +18,7 @@ always @(posedge clock or reset)
 			present_state = next_state;
 	end
 
+// input data assignment logic
 always @(posedge clock or data_in)
 	begin
 		case(present_state)
@@ -43,6 +45,7 @@ always @(posedge clock or data_in)
 		endcase
 	end
 
+// output data assignment logic
 always@(posedge clock or data_in)
 	begin
 		case (present_state)
