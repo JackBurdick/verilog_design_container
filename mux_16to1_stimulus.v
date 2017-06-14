@@ -9,7 +9,8 @@ mux_16to1 C1(Out, In, Sel);
 initial
 begin
 	Sel = 4'b0000;
-	In = 16'b1111000011110000;
+	//In = 16'b1111000011110000;
+	In = 16'b1010101010101010;
 end
 
 // assignment
@@ -38,12 +39,5 @@ initial
 begin
 	$monitor($time, " Out = %b, Sel = %d", Out, Sel);
 end
-
-
-
-
-
-
-
 
 endmodule
