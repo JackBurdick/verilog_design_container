@@ -54,3 +54,5 @@ work/_lib1_1.qpg
 work/_vmake
 work/_info
 4bit_adder_ha
+work/_lib1_2.qpg
+*.qpg
