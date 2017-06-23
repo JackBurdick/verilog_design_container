@@ -53,7 +53,7 @@ begin
 	#5 reset = 1'b0;
 	//load value onto clock
 	#5 load_new_c = 1'b0;
-	// [1][2]:[4][8]{AM=1]
+	// [1][2]:[5][8]{AM=1]
 	#5 new_current_time_ms_hr = 4'b0001; new_current_time_ls_hr = 4'b0010; new_current_time_ms_min = 4'b0101; new_current_time_ls_min = 4'b1000; new_current_time_AM = 1'b1; load_new_c = 1'b1;
 	#5 load_new_c = 1'b0;
 	// set one_minute high to begin counting -- for simulation, we don't need to pulse
