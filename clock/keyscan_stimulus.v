@@ -21,22 +21,26 @@ begin
 	clk   = 1'b0;
 end
 
-always
+// have clock running so we capture posedge w/in module
+initial
 begin
-	#1 clk = !clk;
+	forever 
+	begin
+	#1 clk = ~clk;
+	end
 end
 
 
 initial
 begin
 	// [4]
-	#5 shift = 1'b0; rows = 3'b111;
+	#5 shift = 1'b0; rows = 3'b100;
 	// [8]
-	#5 shift = 1'b1; rows = 3'b000;
+	#5 shift = 1'b1; rows = 3'b010;
 	// [2]
-	#5 shift = 1'b1; rows = 3'b101;
+	#5 shift = 1'b1; rows = 3'b100;
 	// [1]
-	#5 shift = 1'b1; rows = 3'b110;
+	#5 shift = 1'b1; rows = 3'b100;
 
 	#10 $finish;
 end
